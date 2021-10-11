@@ -15,8 +15,8 @@ import java.util.Arrays;
 /**
  * Created by ChenCF on 2021/10/10
  */
-@Aspect      //标记为切面
-@Component   //标记为bean   才能切入ioc里面   交给ioc容器去管理
+//@Aspect      //标记为切面
+//@Component   //标记为bean   才能切入ioc里面   交给ioc容器去管理
 public class LogAspect {
 
 
@@ -76,7 +76,7 @@ public class LogAspect {
     }
 
     //TODO  环绕通知  在环绕通知里面获取方法名称不能使用joinPoint
-    @Around("pointCut()")
+   // @Around("pointCut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) {
 
         //环绕通知里面获取方法名称

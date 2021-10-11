@@ -6,15 +6,16 @@ import com.tulingxyuan.service.UserService;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by ChenCF on 2021/10/8
  */
 @Service
-public class UserServiceImpl  implements UserService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
-    private  UserDao userDao;
+    private UserDao userDao;
 
     @Override
     public void add(User user) throws Exception {
@@ -23,15 +24,17 @@ public class UserServiceImpl  implements UserService {
 
 
     @Override
+//    @Transactional(timeout = 1)  设置请求超时
     public void delete(Integer id) throws Exception {
-  userDao.delete(id);
+   //     Thread.sleep(2000);
+        userDao.delete(id);
     }
 
     @Override
-    @Logger(name="这个是查询用户的select")
+    @Logger(name = "这个是查询用户的select")
     public User select(Integer id) throws Exception {
         System.out.println("id = " + id);
-       return userDao.select(id);
+        return userDao.select(id);
     }
 
     @Override
