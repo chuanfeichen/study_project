@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--    <bean class="com.tulingxyuan.User" id="User" name="user111,user2222">-->
+    <!--        <description>这个bean是用来测试的</description>-->
+    <!--    </bean>-->
+
+    <!--    &lt;!&ndash;将 name为user的设置别名&ndash;&gt;-->
+    <!--    <alias name="User" alias="userAlias"></alias>-->
+
+    <!--    &lt;!&ndash;基于set 方式属性    依赖注入   注入属性  start        name属性对于的是bean里面set方法的名字&ndash;&gt;-->
+    <!--    <bean class="com.tulingxyuan.User" id="user2">-->
+    <!--        <property name="id" value="1"></property>-->
+    <!--        <property name="username" value="2"></property>-->
+    <!--        <property name="realname" value="3"></property>-->
+    <!--    </bean>-->
+    <!--    &lt;!&ndash;   end       &ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;构造函数的方式   注入属性  start  &ndash;&gt;-->
+    <!--    <bean class="com.tulingxyuan.User" id="user3">-->
+    <!--        <constructor-arg name="id" value="1"></constructor-arg>-->
+    <!--        <constructor-arg name="realname" value="1"></constructor-arg>-->
+    <!--        <constructor-arg name="username" value="1"></constructor-arg>-->
+    <!--    </bean>-->
+    <!--    &lt;!&ndash;   end       &ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;   测试复杂类属性的注入&ndash;&gt;-->
+    <!--    <bean class="com.tulingxyuan.Person" id="person">-->
+    <!--        <property name="realname">-->
+    <!--            <null></null>-->
+    <!--        </property>-->
+    <!--        <property name="wife" ref="wife"></property>-->
+
+    <!--    </bean>-->
+    <!--    <bean class="com.tulingxyuan.Wife" id="wife">-->
+    <!--        <property name="age" value="2"></property>-->
+
+    <!--    </bean>-->
+
+    <context:component-scan base-package="com.tulingxyuan"></context:component-scan>
+    <!--  开启aop注解的使用-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+
+</beans>
