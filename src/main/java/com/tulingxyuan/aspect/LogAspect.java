@@ -75,7 +75,6 @@ public class LogAspect {
         // System.out.println("后置异常通知");
     }
 
-
     //TODO  环绕通知  在环绕通知里面获取方法名称不能使用joinPoint
     @Around("pointCut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) {
