@@ -26,6 +26,7 @@ public class LogAspect {
     }
 
 
+
     //前置通知     切点表达式
     // @Before("execution(* com.tulingxyuan.service.Impl..*.*(..))")
     //加@annotation(ApiOperation)就可以在swagger获取value名称   就可以匹配方法上面有ApiOperation这个的注解的name名称，也可以进行事务管理
